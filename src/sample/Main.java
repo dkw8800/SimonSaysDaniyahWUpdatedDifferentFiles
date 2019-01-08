@@ -11,8 +11,9 @@ import java.awt.event.ActionListener;
 
 public class Main extends Application {
 
-    public boolean gamerunning = true;
-    public int buttoninput;
+    public static boolean gamerunning = true;
+    public static int[] answers = new int[50];
+    private static int indexnow = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -25,6 +26,17 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        while(gamerunning == true)
+        {
+            int binput = SampleController.returnbutton();
+            System.out.println(binput);
+            if(binput != answers[indexnow])
+            {
+                gamerunning = false;
+            }
+        }
+
+        SampleController.endgame(gamerunning);
     }
 
 

@@ -6,24 +6,33 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" prefHeight="161.0" prefWidth="265.0" stylesheets="/sample/sample.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
+<GridPane alignment="center" hgap="10" minHeight="200.0" minWidth="500.0" prefWidth="500.0" stylesheets="/sample/sample.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
 
-    <Button onAction="#sayHelloWorld" text=" 1 " GridPane.columnIndex="1" GridPane.rowIndex="5" />
-    <Label fx:id="button1" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-    
-    <Button onAction="#sayHelloWorld" prefHeight="0.0" prefWidth="30.0" text=" 2 " GridPane.columnIndex="5" GridPane.rowIndex="5" />
-    <Label fx:id="button2" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+    <Button onAction="#setButton1" text=" 1 " GridPane.columnIndex="4" GridPane.rowIndex="4" />
+    <Label fx:id="button1" GridPane.columnIndex="9" GridPane.rowIndex="14" />
 
+    <Button onAction="#setButton2" prefHeight="0.0" prefWidth="30.0" text=" 2 " GridPane.columnIndex="8" GridPane.rowIndex="4" />
+    <Label fx:id="button2" GridPane.columnIndex="9" GridPane.rowIndex="14" />
 
+   <Button onAction="#setButton3" prefHeight="0.0" prefWidth="30.0" text=" 3 " GridPane.columnIndex="4" GridPane.rowIndex="11" />
+   <Label fx:id="button3" GridPane.columnIndex="9" GridPane.rowIndex="14" />
+
+   <Button onAction="#setButton4" prefHeight="0.0" prefWidth="30.0" text=" 4 " GridPane.columnIndex="8" GridPane.rowIndex="11" />
+   <Label fx:id="button4" GridPane.columnIndex="9" GridPane.rowIndex="14" />
+
+   <Label fx:id="test" prefHeight="17.0" prefWidth="161.0" text="Click to change me!" GridPane.columnIndex="7" GridPane.rowIndex="14" />
 
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
+      <ColumnConstraints percentWidth="0.0" />
       <ColumnConstraints />
       <ColumnConstraints />
-      <ColumnConstraints />
+      <ColumnConstraints maxWidth="200.0" minWidth="30.0" prefWidth="200.0" />
+      <ColumnConstraints maxWidth="30.0" minWidth="30.0" percentWidth="0.0" prefWidth="30.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
       <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
@@ -35,10 +44,15 @@
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints percentHeight="0.0" />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
    </rowConstraints>
 </GridPane>
